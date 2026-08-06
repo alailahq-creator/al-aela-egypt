@@ -640,7 +640,7 @@
     function getAIResponse(userText) {
       const text = userText.toLowerCase();
       if (text.includes("موعد") || text.includes("متى") || text.includes("امتى") || text.includes("ينزل") || text.includes("تاريخ")) {
-        return "🗓️ **يا سيدي المواعيد الرسمية كالتالي:**<br>• جوجل بلاي (Android): **الأربعاء 09 / 09 / 2026**<br>• آب ستور (iPhone): **السبت 10 / 10 / 2026**.<br><br>وتقدر دلوقتي حالا تنزل النسخة التجريبية وتجربها من البانرات اللي فوق بنفسك! 🚀";
+        return "🗓️ **المواعيد الرسمية كالتالي:**<br>• جوجل بلاي (Android): **الأربعاء 09 / 09 / 2026**<br>• آب ستور (iPhone): **السبت 10 / 10 / 2026**.<br><br>وتقدر دلوقتي حالا تنزل النسخة التجريبية وتجربها من البانرات اللي فوق بنفسك! 🚀";
       } else if (text.includes("تحميل") || text.includes("تنزل") || text.includes("نزله") || text.includes("رابط") || text.includes("apk")) {
         return "📱 تقدر تنزل النسخ التجريبية الحالية مباشرة:<br>1. **تطبيق العائلة** (البانر الأول)<br>2. **تطبيق الكباتن** (البانر الثاني)<br>اضغط على البانر وقم بالتحميل فوراً!";
       } else if (text.includes("محمد") || text.includes("علاء") || text.includes("الرئيس") || text.includes("الإدارة")) {

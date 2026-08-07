@@ -49,9 +49,10 @@
 
   <style>
     :root {
-      --primary: #c084fc;
-      --primary-hover: #a855f7;
-      --secondary: #38bdf8;
+      --primary: #c084fc;       /* موف فاتح */
+      --primary-hover: #a855f7; /* موف أساسي */
+      --secondary: #d8b4fe;     /* موف مضيء (بديل الأزرق) */
+      --accent: #9333ea;        /* موف غامق (بديل الأزرق الغامق) */
       --text-main: #ffffff;
       --text-muted: #94a3b8;
       --glass-bg: rgba(20, 15, 38, 0.4);
@@ -59,7 +60,7 @@
       --glass-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2);
     }
 
-    /* خلفية متحركة خيالية */
+    /* خلفية متحركة خيالية (درجات الموف والأسود فقط) */
     @keyframes gradientBG {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
@@ -69,8 +70,8 @@
     body {
       margin: 0;
       padding: 0;
-      /* تدرج لوني متحرك يعطي إحساس الحلم/الفضاء */
-      background: linear-gradient(-45deg, #0b0914, #1a0b2e, #0f172a, #2e0854);
+      /* تدرج لوني يعتمد على الموف الغامق جداً والأسود */
+      background: linear-gradient(-45deg, #0b0914, #1a0b2e, #1e0a3c, #2e0854);
       background-size: 400% 400%;
       animation: gradientBG 15s ease infinite;
       font-family: 'Cairo', sans-serif;
@@ -167,9 +168,9 @@
     }
 
     .slider-nav-btn:hover {
-      background: var(--primary);
-      box-shadow: 0 0 20px var(--primary);
-      border-color: var(--primary);
+      background: var(--primary-hover);
+      box-shadow: 0 0 20px var(--primary-hover);
+      border-color: var(--primary-hover);
       transform: translateY(-50%) scale(1.1);
     }
 
@@ -252,20 +253,21 @@
     .social-tiktok:hover { background: #000000; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4); }
     .social-telegram:hover { background: #0088cc; box-shadow: 0 10px 25px rgba(0, 136, 204, 0.6); }
 
-    /* الهيدر والعنوان الرئيسي - تأثير النيون */
+    /* الهيدر والعنوان الرئيسي - تأثير النيون باللون الموف */
     .header {
       text-align: center;
       margin-bottom: 40px;
     }
 
     .header h1 {
-      background: linear-gradient(to left, #c084fc, #38bdf8);
+      /* تدرج للموف بالكامل */
+      background: linear-gradient(to left, var(--secondary), var(--primary-hover));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 2.8rem;
       font-weight: 900;
       margin: 0 0 15px 0;
-      text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+      text-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
       letter-spacing: -1px;
     }
 
@@ -338,13 +340,13 @@
 
     .date-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
-      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 15px 35px rgba(216, 180, 254, 0.2);
+      border-color: rgba(216, 180, 254, 0.4);
     }
 
     .date-card i {
       font-size: 3rem;
-      background: linear-gradient(135deg, #c084fc, #38bdf8);
+      background: linear-gradient(135deg, var(--secondary), var(--primary-hover));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 15px;
@@ -361,7 +363,7 @@
       display: inline-block;
       margin-top: 15px;
       padding: 8px 20px;
-      background: linear-gradient(135deg, var(--primary-hover), var(--secondary));
+      background: linear-gradient(135deg, var(--primary-hover), var(--accent));
       color: #fff;
       font-weight: 800;
       border-radius: 30px;
@@ -419,7 +421,7 @@
 
     .signature-card h4 { margin: 0 0 10px 0; color: var(--text-muted); font-size: 1.1rem; }
     .signature-card .boss-name { 
-      background: linear-gradient(to right, #fff, #c084fc);
+      background: linear-gradient(to right, #fff, var(--primary));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 1.8rem; 
@@ -455,10 +457,10 @@
 
     .custom-btn {
       width: 100%; padding: 18px; border-radius: 16px; border: none;
-      background: linear-gradient(135deg, var(--primary-hover), #6366f1);
+      background: linear-gradient(135deg, var(--primary-hover), var(--accent));
       color: #fff; font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 1.2rem;
       cursor: pointer; transition: all 0.4s ease; 
-      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+      box-shadow: 0 10px 30px rgba(168, 85, 247, 0.4);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
@@ -491,19 +493,19 @@
 
     .avatar-icon { 
       width: 50px; height: 50px; border-radius: 50%; 
-      background: linear-gradient(135deg, #a855f7, #38bdf8); 
+      background: linear-gradient(135deg, var(--primary), var(--secondary)); 
       display: flex; align-items: center; justify-content: center; flex-shrink: 0; 
       box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
     }
     .avatar-icon svg { width: 28px; height: 28px; fill: #ffffff; }
 
     .comment-content { flex-grow: 1; }
-    .author-name { color: #e879f9; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.5px;}
+    .author-name { color: var(--secondary); font-weight: 800; font-size: 1.15rem; letter-spacing: 0.5px;}
     .comment-text { margin: 8px 0 0 0; color: #f1f5f9; font-size: 1.05rem; line-height: 1.7; }
 
     .admin-reply-card {
       margin-right: 50px;
-      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(99, 102, 241, 0.1));
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(147, 51, 234, 0.1));
       backdrop-filter: blur(10px);
       padding: 18px 24px;
       border-radius: 20px;
@@ -514,13 +516,13 @@
 
     .admin-avatar-img {
       width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
-      border: 2px solid #e879f9; flex-shrink: 0;
+      border: 2px solid var(--secondary); flex-shrink: 0;
       box-shadow: 0 0 15px rgba(232, 121, 249, 0.5);
     }
 
     .admin-header-title { display: flex; align-items: center; gap: 8px; }
     .admin-badge-name { color: #ffffff; font-weight: 900; font-size: 1.1rem; text-shadow: 0 0 5px rgba(255,255,255,0.5);}
-    .admin-verified-star { width: 20px; height: 20px; filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.8)); }
+    .admin-verified-star { width: 20px; height: 20px; filter: drop-shadow(0 0 5px rgba(216, 180, 254, 0.8)); }
     .admin-reply-text { margin: 8px 0 0 0; color: #e2e8f0; font-size: 1.05rem; line-height: 1.7; }
     .empty-msg { color: var(--text-muted); text-align: center; padding: 40px 0; font-size: 1.2rem;}
 
@@ -533,7 +535,7 @@
 
     .chat-floating-btn {
       position: fixed; bottom: 30px; left: 30px; width: 70px; height: 70px;
-      background: linear-gradient(135deg, #c084fc, #6366f1); border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent)); border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       cursor: pointer; z-index: 999999;
       transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -574,7 +576,7 @@
       box-shadow: 0 0 10px #10b981;
     }
 
-    .chat-avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #a855f7; }
+    .chat-avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); }
     .chat-author-name { color: #ffffff; font-weight: 800; font-size: 1.15rem; }
     .chat-verified-badge { width: 20px; height: 20px; }
     .chat-subtitle { color: #94a3b8; font-size: 0.85rem; letter-spacing: 0.5px;}
@@ -594,15 +596,15 @@
       backdrop-filter: blur(5px);
     }
     .chat-bubble-user { 
-      background: linear-gradient(135deg, #a855f7, #6366f1); color: #ffffff; 
+      background: linear-gradient(135deg, var(--primary), var(--accent)); color: #ffffff; 
       align-self: flex-end; border-bottom-left-radius: 4px; 
     }
 
     .typing-indicator { display: none; align-self: flex-start; background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 20px; border-bottom-right-radius: 4px; border: 1px solid rgba(255,255,255,0.1);}
-    .typing-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #c084fc; margin: 0 3px; animation: typing 1.4s infinite ease-in-out; }
+    .typing-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: var(--primary); margin: 0 3px; animation: typing 1.4s infinite ease-in-out; }
     .typing-dot:nth-child(2) { animation-delay: 0.2s; }
     .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes typing { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(-6px); opacity: 1; box-shadow: 0 0 10px #c084fc; } }
+    @keyframes typing { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(-6px); opacity: 1; box-shadow: 0 0 10px var(--primary); } }
 
     .chat-footer { padding: 15px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; gap: 10px; backdrop-filter: blur(10px);}
     .chat-input { 
@@ -611,20 +613,20 @@
       background: rgba(255, 255, 255, 0.05); color: #ffffff; outline: none; 
       font-family: 'Cairo', sans-serif; font-size:1rem; transition: 0.3s;
     }
-    .chat-input:focus { background: rgba(255, 255, 255, 0.1); border-color: #c084fc; box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);}
+    .chat-input:focus { background: rgba(255, 255, 255, 0.1); border-color: var(--primary); box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);}
     .chat-send-btn { 
       padding: 0 22px; border-radius: 16px; border: none; 
-      background: linear-gradient(135deg, #c084fc, #38bdf8); color: #ffffff; 
+      background: linear-gradient(135deg, var(--secondary), var(--primary-hover)); color: #ffffff; 
       font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 1.1rem;
       cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center;
     }
-    .chat-send-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); }
+    .chat-send-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(216, 180, 254, 0.5); }
 
     #comingSoonToast {
       display: none; position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%);
-      background: rgba(15, 12, 27, 0.9); color: #e879f9; border: 1px solid #e879f9;
+      background: rgba(15, 12, 27, 0.9); color: var(--secondary); border: 1px solid var(--secondary);
       padding: 16px 32px; border-radius: 20px; font-weight: 900; font-size: 1.2rem; z-index: 999999;
-      backdrop-filter: blur(10px); box-shadow: 0 10px 40px rgba(232, 121, 249, 0.4);
+      backdrop-filter: blur(10px); box-shadow: 0 10px 40px rgba(216, 180, 254, 0.4);
       animation: toastIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
     }
 
@@ -659,9 +661,9 @@
       <a href="#" id="socialTg" target="_blank" class="social-btn social-telegram"><i class="fab fa-telegram-plane"></i></a>
     </div>
 
-    <!-- الهيدر والرسالة الرسمية -->
+    <!-- الهيدر والعنوان الرئيسي -->
     <div class="header">
-      <h1>منصة العائلة الخيالية</h1>
+      <h1>المنصة الرسمية لتطبيق العائلة</h1>
     </div>
 
     <div class="glass-card welcome-card">
@@ -750,7 +752,7 @@
             <span class="chat-author-name">ليان (AI)</span>
             <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785910367/ic_verified_badge_xmbitn.png" alt="توثيق" class="chat-verified-badge" />
           </div>
-          <span class="chat-subtitle">مساعدة ذكية من بُعد آخر ✨</span>
+          <span class="chat-subtitle">المساعدة الذكية الرسمية للتطبيق ✨</span>
         </div>
       </div>
       <button class="chat-close-btn" onclick="toggleChatPopup()">&times;</button>

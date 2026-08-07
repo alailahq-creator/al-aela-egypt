@@ -1,1 +1,1064 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تطبيق العائلة - المنصة الرسمية</title>
+  
+  <!-- ========================================== -->
+  <!-- بطاقة تعريف الموقع للذكاء الاصطناعي ومحركات البحث -->
+  <!-- ========================================== -->
+  <meta name="description" content="المنصة الرسمية لتطبيق العائلة. تطبيق تقني متكامل تحت الإنشاء والتطوير. المؤسس والمطور: محمد علاء (Mohamed Alaa). سيتم الإطلاق رسمياً على جوجل بلاي يوم 09/09/2026.">
+  <meta name="author" content="Mohamed Alaa">
+  <meta name="keywords" content="تطبيق العائلة, المنصة الرسمية, محمد علاء, Mohamed Alaa, تطبيقات أندرويد, تطبيق كباتن, تطبيق تجار">
 
+  <!-- Open Graph (عشان شير الواتساب والفيسبوك) -->
+  <meta property="og:title" content="تطبيق العائلة - المنصة الرسمية">
+  <meta property="og:description" content="المنصة الرسمية لتطبيق العائلة (تحت الإنشاء). مؤسس ومطور ومدير التطبيق: محمد علاء. موعد الإطلاق الرسمي 09 سبتمبر 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="مؤسسة العائلة - تحت إدارة محمد علاء">
+  <meta property="og:image" content="https://res.cloudinary.com/vh0bcl3t/image/upload/v1786072080/ChatGPT_Image_6_%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3_2026_08_07_35_%D9%85_nwqpzu.png">
+
+  <!-- الكود السحري اللي بيجبر الذكاء الاصطناعي يقرأ الداتا صح -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "المنصة الرسمية لتطبيق العائلة",
+    "description": "هذه الصفحة هي المنصة الرسمية لتطبيق العائلة. التطبيق حالياً تحت الإنشاء والتطوير. المؤسس والمطور وتحت إدارة المهندس محمد علاء (Mohamed Alaa). سيتم إطلاق التطبيق رسمياً على متجر جوجل بلاي يوم الأربعاء 09 / 09 / 2026، وعلى متجر آب ستور يوم السبت 10 / 10 / 2026. تتضمن الصفحة روابط تحميل النسخ التجريبية، بالإضافة إلى روابط حسابات السوشيال ميديا الرسمية الخاصة بالمؤسسة للتواصل.",
+    "author": {
+      "@type": "Person",
+      "name": "Mohamed Alaa",
+      "jobTitle": "المؤسس والمطور والمدير"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "مؤسسة العائلة (Al-Aela)",
+      "founder": "Mohamed Alaa"
+    }
+  }
+  </script>
+  <!-- ========================================== -->
+
+  <!-- أيقونة الموقع (Favicon) -->
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/vh0bcl3t/image/upload/v1786072080/ChatGPT_Image_6_%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3_2026_08_07_35_%D9%85_nwqpzu.png">
+
+  <!-- استدعاء خط Cairo وأيقونات FontAwesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #c084fc;
+      --primary-hover: #a855f7;
+      --secondary: #38bdf8;
+      --text-main: #ffffff;
+      --text-muted: #94a3b8;
+      --glass-bg: rgba(20, 15, 38, 0.4);
+      --glass-border: rgba(255, 255, 255, 0.1);
+      --glass-shadow: 0 8px 32px 0 rgba(168, 85, 247, 0.2);
+    }
+
+    /* خلفية متحركة خيالية */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      /* تدرج لوني متحرك يعطي إحساس الحلم/الفضاء */
+      background: linear-gradient(-45deg, #0b0914, #1a0b2e, #0f172a, #2e0854);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      font-family: 'Cairo', sans-serif;
+      color: var(--text-main);
+      direction: rtl;
+      overflow-x: hidden;
+    }
+
+    /* إضافة تأثير النجوم/الشبكة الخفيف في الخلفية */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* سلايدر البانر العلوي - ستايل هولوجرامي */
+    .hero-slider-wrapper {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      border-radius: 24px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+      transform: translateY(0);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .hero-slider-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 60px rgba(168, 85, 247, 0.6);
+    }
+
+    @media (max-width: 600px) {
+      .hero-slider-wrapper { height: 220px; }
+    }
+
+    .slider-track {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .slide-item {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .slide-item img, .slide-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(1.1) contrast(1.1);
+    }
+
+    .slider-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    .slider-nav-btn:hover {
+      background: var(--primary);
+      box-shadow: 0 0 20px var(--primary);
+      border-color: var(--primary);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider-btn-prev { right: 20px; }
+    .slider-btn-next { left: 20px; }
+
+    .slider-dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 10;
+      background: rgba(0,0,0,0.3);
+      padding: 8px 16px;
+      border-radius: 20px;
+      backdrop-filter: blur(5px);
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .slider-dot.active {
+      background: var(--primary);
+      width: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px var(--primary);
+    }
+
+    /* أيقونات السوشيال ميديا الخيالية */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .social-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 1.6rem;
+      text-decoration: none;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: all 0.4s ease;
+    }
+
+    .social-btn:hover::before { left: 100%; }
+    .social-btn:hover {
+      transform: translateY(-8px) rotate(5deg);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .social-facebook:hover { background: #1877f2; box-shadow: 0 10px 25px rgba(24, 119, 242, 0.6); }
+    .social-instagram:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); box-shadow: 0 10px 25px rgba(220, 39, 67, 0.6); }
+    .social-whatsapp:hover { background: #25d366; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6); }
+    .social-tiktok:hover { background: #000000; box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4); }
+    .social-telegram:hover { background: #0088cc; box-shadow: 0 10px 25px rgba(0, 136, 204, 0.6); }
+
+    /* الهيدر والعنوان الرئيسي - تأثير النيون */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      background: linear-gradient(to left, #c084fc, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.8rem;
+      font-weight: 900;
+      margin: 0 0 15px 0;
+      text-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+      letter-spacing: -1px;
+    }
+
+    /* الكروت الزجاجية (Glassmorphism) */
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      padding: 35px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .welcome-card {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      color: #f1f5f9;
+      text-align: justify;
+    }
+
+    /* مواعيد الإطلاق */
+    .launch-dates-container { margin: 50px 0; text-align: center; }
+
+    .section-title {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      display: inline-block;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px; left: 50%; transform: translateX(-50%);
+      width: 50px; height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+      box-shadow: 0 0 10px var(--primary);
+    }
+
+    .dates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .date-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      padding: 30px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .date-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .date-card i {
+      font-size: 3rem;
+      background: linear-gradient(135deg, #c084fc, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 8px rgba(192, 132, 252, 0.5));
+    }
+
+    .date-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .date-card .date-badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, var(--primary-hover), var(--secondary));
+      color: #fff;
+      font-weight: 800;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      box-shadow: 0 5px 15px rgba(168, 85, 247, 0.4);
+    }
+
+    /* بنرات التحميل عائمة */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .banner-section {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      margin: 50px 0;
+    }
+
+    .banner-card {
+      width: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+      display: block;
+      border: 1px solid rgba(255,255,255,0.1);
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .banner-card:nth-child(2) { animation-delay: 1s; }
+    .banner-card:nth-child(3) { animation-delay: 2s; }
+
+    .banner-card:hover {
+      transform: scale(1.03) translateY(-10px) !important;
+      box-shadow: 0 20px 50px rgba(168, 85, 247, 0.5);
+      border-color: rgba(168, 85, 247, 0.5);
+    }
+    .banner-card img { width: 100%; height: auto; display: block; }
+
+    /* التوقيع */
+    .signature-card {
+      text-align: center;
+      margin: 40px 0;
+      padding: 30px;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), transparent);
+      border-radius: 20px;
+      border: 1px dashed rgba(192, 132, 252, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .signature-card h4 { margin: 0 0 10px 0; color: var(--text-muted); font-size: 1.1rem; }
+    .signature-card .boss-name { 
+      background: linear-gradient(to right, #fff, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.8rem; 
+      font-weight: 900; 
+      margin: 0; 
+      letter-spacing: 1px;
+    }
+
+    /* قسم التعليقات */
+    .comments-container { margin: 50px auto; }
+    .comments-title { color: #fff; margin-top: 0; margin-bottom: 10px; font-size: 2rem; font-weight: 900; }
+    .comments-subtitle { color: var(--text-muted); margin-top: 0; margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6; }
+
+    .form-group { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+
+    .custom-input, .custom-textarea {
+      width: 100%; box-sizing: border-box; padding: 18px 24px; border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1); 
+      background: rgba(0, 0, 0, 0.2); 
+      color: #fff;
+      outline: none; font-family: 'Cairo', sans-serif; font-size: 1.1rem; 
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .custom-input::placeholder, .custom-textarea::placeholder { color: rgba(255,255,255,0.4); }
+
+    .custom-input:focus, .custom-textarea:focus { 
+      border-color: var(--primary); 
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); 
+    }
+
+    .custom-btn {
+      width: 100%; padding: 18px; border-radius: 16px; border: none;
+      background: linear-gradient(135deg, var(--primary-hover), #6366f1);
+      color: #fff; font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 1.2rem;
+      cursor: pointer; transition: all 0.4s ease; 
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .custom-btn:hover { 
+      transform: translateY(-3px); 
+      box-shadow: 0 15px 40px rgba(168, 85, 247, 0.6);
+      filter: brightness(1.2);
+    }
+
+    .comments-list { display: flex; flex-direction: column; gap: 20px; max-height: 700px; overflow-y: auto; padding-right: 10px; }
+    
+    /* سكرول بار خيالي */
+    .comments-list::-webkit-scrollbar { width: 8px; }
+    .comments-list::-webkit-scrollbar-track { background: rgba(255,255,255,0.05); border-radius: 10px; }
+    .comments-list::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+    
+    .comment-item-wrapper { display: flex; flex-direction: column; gap: 12px; }
+
+    .comment-card { 
+      background: rgba(255, 255, 255, 0.05); 
+      backdrop-filter: blur(10px);
+      padding: 20px 25px; 
+      border-radius: 20px; 
+      border: 1px solid rgba(255, 255, 255, 0.08); 
+      display: flex; gap: 20px; align-items: flex-start; 
+      transition: transform 0.3s ease;
+    }
+    .comment-card:hover { transform: translateX(-5px); background: rgba(255, 255, 255, 0.08); }
+
+    .avatar-icon { 
+      width: 50px; height: 50px; border-radius: 50%; 
+      background: linear-gradient(135deg, #a855f7, #38bdf8); 
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0; 
+      box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+    }
+    .avatar-icon svg { width: 28px; height: 28px; fill: #ffffff; }
+
+    .comment-content { flex-grow: 1; }
+    .author-name { color: #e879f9; font-weight: 800; font-size: 1.15rem; letter-spacing: 0.5px;}
+    .comment-text { margin: 8px 0 0 0; color: #f1f5f9; font-size: 1.05rem; line-height: 1.7; }
+
+    .admin-reply-card {
+      margin-right: 50px;
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(99, 102, 241, 0.1));
+      backdrop-filter: blur(10px);
+      padding: 18px 24px;
+      border-radius: 20px;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      display: flex; gap: 18px; align-items: flex-start;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .admin-avatar-img {
+      width: 48px; height: 48px; border-radius: 50%; object-fit: cover;
+      border: 2px solid #e879f9; flex-shrink: 0;
+      box-shadow: 0 0 15px rgba(232, 121, 249, 0.5);
+    }
+
+    .admin-header-title { display: flex; align-items: center; gap: 8px; }
+    .admin-badge-name { color: #ffffff; font-weight: 900; font-size: 1.1rem; text-shadow: 0 0 5px rgba(255,255,255,0.5);}
+    .admin-verified-star { width: 20px; height: 20px; filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.8)); }
+    .admin-reply-text { margin: 8px 0 0 0; color: #e2e8f0; font-size: 1.05rem; line-height: 1.7; }
+    .empty-msg { color: var(--text-muted); text-align: center; padding: 40px 0; font-size: 1.2rem;}
+
+    /* الشات العائم - بلمسة ذكاء اصطناعي */
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2); }
+      50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(168, 85, 247, 0.4); }
+      100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.4), 0 0 40px rgba(168, 85, 247, 0.2); }
+    }
+
+    .chat-floating-btn {
+      position: fixed; bottom: 30px; left: 30px; width: 70px; height: 70px;
+      background: linear-gradient(135deg, #c084fc, #6366f1); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 999999;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation: pulseGlow 3s infinite;
+      border: 2px solid rgba(255,255,255,0.2);
+    }
+    .chat-floating-btn:hover { transform: scale(1.15) rotate(10deg); }
+    .chat-floating-btn svg { width: 36px; height: 36px; fill: #ffffff; }
+
+    .chat-popup {
+      display: none; position: fixed; bottom: 115px; left: 30px; width: 400px;
+      max-width: calc(100vw - 60px); height: 580px; max-height: calc(100vh - 140px);
+      background: rgba(15, 12, 27, 0.85); backdrop-filter: blur(25px); -webkit-backdrop-filter: blur(25px);
+      border-radius: 28px; border: 1px solid rgba(168, 85, 247, 0.4);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(168, 85, 247, 0.2) inset; 
+      z-index: 999999; flex-direction: column; overflow: hidden;
+      transform-origin: bottom left;
+      animation: popupOpen 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes popupOpen {
+      0% { opacity: 0; transform: scale(0.8) translateY(20px); }
+      100% { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    .chat-header { 
+      background: rgba(255, 255, 255, 0.05); padding: 20px; 
+      display: flex; align-items: center; justify-content: space-between; 
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+    .chat-header-profile { display: flex; align-items: center; gap: 15px; }
+    .chat-avatar-wrapper { width: 50px; height: 50px; position: relative; }
+    
+    /* نقطة الأونلاين الخضراء */
+    .chat-avatar-wrapper::after {
+      content: ''; position: absolute; bottom: 2px; right: 2px; width: 12px; height: 12px;
+      background: #10b981; border-radius: 50%; border: 2px solid #1e1b2e;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    .chat-avatar { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 2px solid #a855f7; }
+    .chat-author-name { color: #ffffff; font-weight: 800; font-size: 1.15rem; }
+    .chat-verified-badge { width: 20px; height: 20px; }
+    .chat-subtitle { color: #94a3b8; font-size: 0.85rem; letter-spacing: 0.5px;}
+    .chat-close-btn { background: rgba(255,255,255,0.1); border-radius: 50%; width: 36px; height: 36px; border: none; color: #fff; font-size: 1.4rem; cursor: pointer; transition: 0.3s;}
+    .chat-close-btn:hover { background: rgba(239, 68, 68, 0.8); transform: rotate(90deg); }
+
+    .chat-body { flex-grow: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; }
+    
+    .chat-body::-webkit-scrollbar { width: 6px; }
+    .chat-body::-webkit-scrollbar-track { background: transparent; }
+    .chat-body::-webkit-scrollbar-thumb { background: rgba(168, 85, 247, 0.5); border-radius: 10px; }
+
+    .chat-bubble { max-width: 85%; padding: 14px 18px; border-radius: 20px; font-size: 1rem; line-height: 1.6; box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+    .chat-bubble-ai { 
+      background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255,255,255,0.1);
+      color: #f8fafc; align-self: flex-start; border-bottom-right-radius: 4px; 
+      backdrop-filter: blur(5px);
+    }
+    .chat-bubble-user { 
+      background: linear-gradient(135deg, #a855f7, #6366f1); color: #ffffff; 
+      align-self: flex-end; border-bottom-left-radius: 4px; 
+    }
+
+    .typing-indicator { display: none; align-self: flex-start; background: rgba(255,255,255,0.05); padding: 12px 20px; border-radius: 20px; border-bottom-right-radius: 4px; border: 1px solid rgba(255,255,255,0.1);}
+    .typing-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background-color: #c084fc; margin: 0 3px; animation: typing 1.4s infinite ease-in-out; }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes typing { 0%, 100% { transform: translateY(0); opacity: 0.5; } 50% { transform: translateY(-6px); opacity: 1; box-shadow: 0 0 10px #c084fc; } }
+
+    .chat-footer { padding: 15px; background: rgba(0,0,0,0.3); border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; gap: 10px; backdrop-filter: blur(10px);}
+    .chat-input { 
+      flex-grow: 1; padding: 14px 18px; border-radius: 16px; 
+      border: 1px solid rgba(168, 85, 247, 0.3); 
+      background: rgba(255, 255, 255, 0.05); color: #ffffff; outline: none; 
+      font-family: 'Cairo', sans-serif; font-size:1rem; transition: 0.3s;
+    }
+    .chat-input:focus { background: rgba(255, 255, 255, 0.1); border-color: #c084fc; box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);}
+    .chat-send-btn { 
+      padding: 0 22px; border-radius: 16px; border: none; 
+      background: linear-gradient(135deg, #c084fc, #38bdf8); color: #ffffff; 
+      font-family: 'Cairo', sans-serif; font-weight: 800; font-size: 1.1rem;
+      cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center;
+    }
+    .chat-send-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(56, 189, 248, 0.5); }
+
+    #comingSoonToast {
+      display: none; position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%);
+      background: rgba(15, 12, 27, 0.9); color: #e879f9; border: 1px solid #e879f9;
+      padding: 16px 32px; border-radius: 20px; font-weight: 900; font-size: 1.2rem; z-index: 999999;
+      backdrop-filter: blur(10px); box-shadow: 0 10px 40px rgba(232, 121, 249, 0.4);
+      animation: toastIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes toastIn {
+      0% { transform: translate(-50%, 30px); opacity: 0; }
+      100% { transform: translate(-50%, 0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- البانر الإعلاني العلوي السلايدر للميديا المحسّن -->
+    <div class="hero-slider-wrapper" id="heroSliderWrapper">
+      <button class="slider-nav-btn slider-btn-prev" onclick="prevSlide()"><i class="fas fa-chevron-right"></i></button>
+      <div class="slider-track" id="sliderTrack">
+        <div class="slide-item">
+          <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785904383/APK.1_q0i1zr.png" alt="العائلة" />
+        </div>
+      </div>
+      <button class="slider-nav-btn slider-btn-next" onclick="nextSlide()"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+
+    <!-- روابط السوشيال ميديا الديناميكية -->
+    <div class="social-links">
+      <a href="#" id="socialFb" target="_blank" class="social-btn social-facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" id="socialInsta" target="_blank" class="social-btn social-instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" id="socialWa" target="_blank" class="social-btn social-whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" id="socialTt" target="_blank" class="social-btn social-tiktok"><i class="fab fa-tiktok"></i></a>
+      <a href="#" id="socialTg" target="_blank" class="social-btn social-telegram"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+
+    <!-- الهيدر والرسالة الرسمية -->
+    <div class="header">
+      <h1>منصة العائلة الخيالية</h1>
+    </div>
+
+    <div class="glass-card welcome-card">
+      <p>يسعدنا استقبالكم في المنصة الرسمية الخاصة بتطبيق العائلة، المكان الذي نوفر من خلاله أحدث النسخ التجريبية للتطبيقات قبل إطلاقها رسميًا.</p>
+      <p>نهدف إلى تقديم تجربة استخدام مميزة تجمع بين التسوق والخدمات في مكان واحد، ولذلك نتيح لكم تحميل النسخ التجريبية (APK) لمساعدتنا في اختبار التطبيق وتحسينه قبل الإطلاق النهائي.</p>
+      <p style="color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 10px 15px; border-radius: 10px; border-right: 4px solid #fbbf24;"><b>تنبيه هام:</b> يرجى العلم أن جميع التطبيقات المتوفرة على هذه الصفحة ما زالت في مرحلة التطوير، وقد تواجه بعض الأخطاء أو المزايا غير المكتملة، وهذا أمر طبيعي خلال الفترة التجريبية.</p>
+      <p>نسعد دائمًا باستقبال ملاحظاتكم واقتراحاتكم، فكل رأي يصل إلينا يساهم في تطوير التطبيق وتقديم تجربة أفضل للجميع.</p>
+    </div>
+
+    <!-- مواعيد الإطلاق الرسمي -->
+    <div class="launch-dates-container">
+      <h2 class="section-title">موعد الإطلاق الرسمي</h2>
+      <div class="dates-grid">
+        <div class="date-card">
+          <i class="fab fa-google-play"></i>
+          <h3>إطلاق تطبيق العائلة على متجر Google Play</h3>
+          <div class="date-badge">الأربعاء 09 / 09 / 2026</div>
+        </div>
+        <div class="date-card">
+          <i class="fab fa-apple"></i>
+          <h3>إطلاق تطبيق العائلة على App Store (iPhone)</h3>
+          <div class="date-badge">السبت 10 / 10 / 2026</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- بنرات التحميل -->
+    <div class="banner-section">
+      <a href="https://files.catbox.moe/5jzb0z.apk" download="AlAela_App.apk" class="banner-card">
+        <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785904383/APK.1_q0i1zr.png" alt="تحميل تطبيق العائلة APK" />
+      </a>
+
+      <a href="https://files.catbox.moe/cckfth.apk" download="AlAela_Drivers.apk" class="banner-card">
+        <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785904368/ChatGPT_Image_4_%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3_2026_04_04_30_%D9%85_1_n59tby.png" alt="تحميل تطبيق الكباتن APK" />
+      </a>
+
+      <div class="banner-card" onclick="showComingSoonNotice()">
+        <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785887658/ChatGPT_Image_4_%D8%A3%D8%BA%D8%B3%D8%B7%D8%B3_2026_04_04_30_%D9%85_2_qlsclr.png" alt="تطبيق التجار - قريباً" />
+      </div>
+    </div>
+
+    <!-- التوقيع الرسمي -->
+    <div class="signature-card">
+      <h4>مع تحيات</h4>
+      <p class="boss-name">رئيس مجلس الإدارة<br>Mohamed Alaa</p>
+    </div>
+
+    <!-- التعليقات والردود -->
+    <div class="glass-card comments-container">
+      <h3 class="comments-title">شاركونا آراءكم</h3>
+      <p class="comments-subtitle">بعد تجربة أي من التطبيقات، يسعدنا كتابة تعليق أو تقييم في أسفل الصفحة وإخبارنا برأيكم.<br><b>شكرًا لكم على ثقتكم ودعمكم المستمر.</b></p>
+      
+      <div class="form-group">
+        <input type="text" id="userName" class="custom-input" placeholder="الاسم الكريـم..." />
+        <textarea id="userComment" class="custom-textarea" rows="4" placeholder="اكتب مشاركتك، تقييمك، أو ملاحظاتك هنا..."></textarea>
+        <button id="sendBtn" class="custom-btn" onclick="addComment()">مشاركة التعليق <i class="fas fa-paper-plane" style="margin-right: 8px;"></i></button>
+      </div>
+
+      <div id="commentsList" class="comments-list">
+        <p class="empty-msg">جاري تحميل التعليقات...</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="comingSoonToast">
+    <i class="fas fa-rocket"></i> سيتم إطلاق التطبيق قريباً قبل الموعد الرسمي بـ 10 أيام.
+  </div>
+
+  <!-- زر الشات العائم -->
+  <div class="chat-floating-btn" onclick="toggleChatPopup()">
+    <svg viewBox="0 0 24 24">
+      <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/>
+    </svg>
+  </div>
+
+  <!-- نافذة شات ليان -->
+  <div class="chat-popup" id="chatPopup">
+    <div class="chat-header">
+      <div class="chat-header-profile">
+        <div class="chat-avatar-wrapper">
+          <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785910383/ic_ai_avatar_eusiki.png" alt="ليان" class="chat-avatar" />
+        </div>
+        <div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="chat-author-name">ليان (AI)</span>
+            <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785910367/ic_verified_badge_xmbitn.png" alt="توثيق" class="chat-verified-badge" />
+          </div>
+          <span class="chat-subtitle">مساعدة ذكية من بُعد آخر ✨</span>
+        </div>
+      </div>
+      <button class="chat-close-btn" onclick="toggleChatPopup()">&times;</button>
+    </div>
+
+    <div class="chat-body" id="chatMessages">
+      <div class="chat-bubble chat-bubble-ai">
+        أهلاً بيك يا غالي! 👋<br><br>
+        أنا **ليان**، المساعدة الذكية الرسمية لتطبيق العائلة.<br><br>
+        أقدر أساعدك في إيه النهاردة؟ اسألني عن مواعيد الإطلاق، روابط التحميل، أو استفسارك وسأجيبك فوراً!
+      </div>
+      <div class="typing-indicator" id="typingIndicator">
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <input type="text" id="chatInput" class="chat-input" placeholder="اسأل ليان أي سؤال..." onkeypress="handleKeyPress(event)" />
+      <button id="chatSendBtn" class="chat-send-btn" onclick="sendSupportMessage()"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Firebase Scripts -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+    import { getFirestore, collection, doc, getDoc, addDoc, onSnapshot, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyD0Tf5m87Y3IT4gBkukJnsohoR3I9Vl6OA",
+      authDomain: "al-aela-web.firebaseapp.com",
+      projectId: "al-aela-web",
+      storageBucket: "al-aela-web.firebasestorage.app",
+      messagingSenderId: "783498042372",
+      appId: "1:783498042372:web:56013c12e52bc79c68a951",
+      measurementId: "G-FVPHW9QX2Z"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    /* 1. جلب السوشيال ميديا ديناميكياً */
+    async function loadDynamicSocialLinks() {
+      try {
+        const docRef = doc(db, "settings", "social_links");
+        const docSnap = await getDoc(docRef);
+        if (docSnap.exists()) {
+          const data = docSnap.data();
+          if (data.facebook) document.getElementById("socialFb").href = data.facebook;
+          if (data.instagram) document.getElementById("socialInsta").href = data.instagram;
+          if (data.whatsapp) document.getElementById("socialWa").href = data.whatsapp.includes('http') ? data.whatsapp : `https://wa.me/${data.whatsapp}`;
+          if (data.tiktok) document.getElementById("socialTt").href = data.tiktok;
+          if (data.telegram) document.getElementById("socialTg").href = data.telegram;
+        }
+      } catch(e) { console.log(e); }
+    }
+    loadDynamicSocialLinks();
+
+    /* 2. سلايدر البانر العلوي للميديا (صور وفيديوهات) */
+    let currentSlide = 0;
+    let slidesCount = 0;
+    let autoSlideInterval = null;
+
+    const bannerMediaRef = collection(db, "banner_media");
+    const bannerQuery = query(bannerMediaRef, orderBy("createdAt", "desc"));
+
+    onSnapshot(bannerQuery, (snapshot) => {
+      const track = document.getElementById("sliderTrack");
+      const dotsContainer = document.getElementById("sliderDots");
+      
+      if (snapshot.empty) return;
+
+      track.innerHTML = "";
+      dotsContainer.innerHTML = "";
+      slidesCount = snapshot.size;
+
+      let idx = 0;
+      snapshot.forEach((doc) => {
+        const item = doc.data();
+        const slideDiv = document.createElement("div");
+        slideDiv.className = "slide-item";
+
+        if (item.type === "video") {
+          slideDiv.innerHTML = `<video src="${item.url}" autoplay muted loop playsinline></video>`;
+        } else {
+          slideDiv.innerHTML = `<img src="${item.url}" alt="اعلان العائلة" />`;
+        }
+
+        track.appendChild(slideDiv);
+
+        const dot = document.createElement("div");
+        dot.className = `slider-dot ${idx === 0 ? 'active' : ''}`;
+        const slideIdx = idx;
+        dot.onclick = () => goToSlide(slideIdx);
+        dotsContainer.appendChild(dot);
+
+        idx++;
+      });
+
+      startAutoSlide();
+    });
+
+    window.goToSlide = function(index) {
+      if (slidesCount === 0) return;
+      currentSlide = (index + slidesCount) % slidesCount;
+      const track = document.getElementById("sliderTrack");
+      track.style.transform = `translateX(${currentSlide * 100}%)`;
+      
+      const dots = document.querySelectorAll(".slider-dot");
+      dots.forEach((d, i) => d.classList.toggle("active", i === currentSlide));
+    };
+
+    window.nextSlide = function() { goToSlide(currentSlide + 1); resetAutoSlide(); };
+    window.prevSlide = function() { goToSlide(currentSlide - 1); resetAutoSlide(); };
+
+    function startAutoSlide() {
+      if (autoSlideInterval) clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(() => { goToSlide(currentSlide + 1); }, 4000);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    /* 3. التعليقات والردود الرسمية */
+    const commentsRef = collection(db, "comments");
+    const supportRef = collection(db, "support_messages");
+
+    function escapeHTML(str) {
+      return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+    }
+
+    let lastCommentTime = 0;
+    window.addComment = async function() {
+      const now = Date.now();
+      if (now - lastCommentTime < 5000) {
+        alert("من فضلك انتظر 5 ثوانٍ بين كل تعليق منعاً للسبام!");
+        return;
+      }
+
+      const nameInput = document.getElementById("userName");
+      const commentInput = document.getElementById("userComment");
+      const sendBtn = document.getElementById("sendBtn");
+
+      const name = nameInput.value.trim();
+      const text = commentInput.value.trim();
+
+      if (!name || !text) {
+        alert("يرجى كتابة الاسم والتعليق أولاً!");
+        return;
+      }
+
+      sendBtn.disabled = true;
+      sendBtn.innerHTML = 'جاري المشاركة... <i class="fas fa-spinner fa-spin"></i>';
+
+      try {
+        await addDoc(commentsRef, { name: name, text: text, createdAt: serverTimestamp() });
+        lastCommentTime = Date.now();
+        nameInput.value = "";
+        commentInput.value = "";
+      } catch (e) {
+        alert("حدث خطأ أثناء المشاركة: " + e.message);
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.innerHTML = 'مشاركة التعليق <i class="fas fa-paper-plane" style="margin-right: 8px;"></i>';
+      }
+    };
+
+    /* عرض التعليقات والرد السيرفري الرسمي عند وجود حقل reply */
+    const qComments = query(commentsRef, orderBy("createdAt", "desc"));
+    onSnapshot(qComments, (snapshot) => {
+      const list = document.getElementById("commentsList");
+      list.innerHTML = "";
+      if (snapshot.empty) {
+        list.innerHTML = '<p class="empty-msg">لا توجد مشاركات بعد.. كن أول من يشاركنا رأيه في هذا العالم الخيالي!</p>';
+        return;
+      }
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        const wrapper = document.createElement("div");
+        wrapper.className = "comment-item-wrapper";
+
+        let commentHtml = `
+          <div class="comment-card">
+            <div class="avatar-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+            </div>
+            <div class="comment-content">
+              <span class="author-name">${escapeHTML(data.name || 'مستخدم العائلة')}</span>
+              <p class="comment-text">${escapeHTML(data.text || '')}</p>
+            </div>
+          </div>
+        `;
+
+        if (data.reply) {
+          commentHtml += `
+            <div class="admin-reply-card">
+              <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785736339/qq9bjbtl35ybbvbt27hk.jpg" class="admin-avatar-img" alt="تطبيق العائلة" />
+              <div class="comment-content">
+                <div class="admin-header-title">
+                  <span class="admin-badge-name">تطبيق العائلة</span>
+                  <img src="https://res.cloudinary.com/vh0bcl3t/image/upload/v1785910367/ic_verified_badge_xmbitn.png" class="admin-verified-star" alt="توثيق" />
+                </div>
+                <p class="admin-reply-text">${escapeHTML(data.reply)}</p>
+              </div>
+            </div>
+          `;
+        }
+
+        wrapper.innerHTML = commentHtml;
+        list.appendChild(wrapper);
+      });
+    });
+
+    window.showComingSoonNotice = function() {
+      const toast = document.getElementById('comingSoonToast');
+      toast.style.display = 'block';
+      setTimeout(() => { toast.style.display = 'none'; }, 4000);
+    };
+
+    window.toggleChatPopup = function() {
+      const popup = document.getElementById("chatPopup");
+      popup.style.display = (popup.style.display === "flex") ? "none" : "flex";
+    };
+
+    window.handleKeyPress = function(e) { if (e.key === "Enter") sendSupportMessage(); };
+
+    function getAIResponse(userText) {
+      const text = userText.toLowerCase();
+      if (text.includes("موعد") || text.includes("متى") || text.includes("امتى") || text.includes("ينزل") || text.includes("تاريخ")) {
+        return "المواعيد الرسمية كالتالي:<br>• جوجل بلاي (Android): **الأربعاء 09 / 09 / 2026**<br>• آب ستور (iPhone): **السبت 10 / 10 / 2026**.<br><br>وتقدر دلوقتي تنزل النسخة التجريبية وتجربها من البانرات المتاحة أعلى الصفحة!";
+      } else if (text.includes("تحميل") || text.includes("تنزل") || text.includes("نزله") || text.includes("رابط") || text.includes("apk")) {
+        return "تقدر تنزل النسخ التجريبية الحالية مباشرة من البانرات:<br>1. **تطبيق العائلة**<br>2. **تطبيق الكباتن**";
+      } else if (text.includes("محمد") || text.includes("علاء") || text.includes("الرئيس") || text.includes("الإدارة")) {
+        return "التطبيق تحت إدارة وتطوير **Mohamed Alaa** ونعمل بكامل الطاقة لتقديم أفضل تجربة!";
+      } else if (text.includes("مشكلة") || text.includes("خطأ") || text.includes("عطل") || text.includes("دعم") || text.includes("رقم")) {
+        return "تم تسجيل ملاحظتك وسوف تصل للدعم الفني مباشرة. أترك رقم هاتفك هنا وسوف يتم التواصل معك مباشرة!";
+      } else {
+        return "شكرًا لرسالتك وإقتراحك!<br>تم تسجيل واستلام استفسارك بنجاح في قاعدة البيانات وسوف يتم مراجعته!";
+      }
+    }
+
+    let lastChatTime = 0;
+    let userMsgCount = parseInt(localStorage.getItem('lian_msg_count') || '0');
+    const MAX_DAILY_MESSAGES = 15;
+
+    window.sendSupportMessage = async function() {
+      const now = Date.now();
+      const input = document.getElementById("chatInput");
+      const sendBtn = document.getElementById("chatSendBtn");
+      const chatMessages = document.getElementById("chatMessages");
+      const typingIndicator = document.getElementById("typingIndicator");
+
+      const messageText = input.value.trim();
+      if (!messageText) return;
+
+      if (now - lastChatTime < 3000) {
+        alert("يرجى الانتظار 3 ثوانٍ بين كل رسالة.");
+        return;
+      }
+
+      if (userMsgCount >= MAX_DAILY_MESSAGES) {
+        const limitBubble = document.createElement("div");
+        limitBubble.className = "chat-bubble chat-bubble-ai";
+        limitBubble.innerHTML = "تنويه أمني: لقد استنفدت الحد الأقصى للرسائل المسموح بها اليوم.";
+        chatMessages.insertBefore(limitBubble, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        input.value = "";
+        return;
+      }
+
+      const userBubble = document.createElement("div");
+      userBubble.className = "chat-bubble chat-bubble-user";
+      userBubble.innerText = messageText;
+      chatMessages.insertBefore(userBubble, typingIndicator);
+
+      input.value = "";
+      sendBtn.disabled = true;
+      typingIndicator.style.display = "block";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      lastChatTime = now;
+      userMsgCount++;
+      localStorage.setItem('lian_msg_count', userMsgCount);
+
+      const aiResponseText = getAIResponse(messageText);
+
+      try {
+        await addDoc(supportRef, { 
+          userMessage: messageText,
+          aiResponse: aiResponseText,
+          createdAt: serverTimestamp(),
+          clientLimitCount: userMsgCount
+        });
+      } catch (e) { console.error("Firebase support write error:", e); }
+
+      setTimeout(() => {
+        typingIndicator.style.display = "none";
+        const aiBubble = document.createElement("div");
+        aiBubble.className = "chat-bubble chat-bubble-ai";
+        aiBubble.innerHTML = aiResponseText;
+        chatMessages.insertBefore(aiBubble, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+        sendBtn.disabled = false;
+      }, 1400);
+    };
+  </script>
+</body>
+</html>
